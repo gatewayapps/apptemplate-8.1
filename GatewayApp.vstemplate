@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+	<TemplateData>
+		<Name>Gateway Apps Universal App</Name>
+		<Description>Starting template for Gateway Apps Universal App</Description>
+		<DefaultName>GatewayApp</DefaultName>
+		<ProjectType>CSharp</ProjectType>
+		<TargetPlatformName>Windows</TargetPlatformName>
+		<RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+		<CreateInPlace>true</CreateInPlace>		
+		<CreateNewFolder>true</CreateNewFolder>		
+		<LocationField>Enabled</LocationField>	
+		<PreviewImage>BlankApp.png</PreviewImage>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<SortOrder>10</SortOrder>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+		<PromptForSaveOnCreation>true</PromptForSaveOnCreation>		
+	</TemplateData>
+ 	<TemplateContent>
+ 		<ProjectCollection>
+			<SolutionFolder Name="$projectname$">
+
+				<SolutionFolder Name="App">
+					<ProjectTemplateLink ProjectName="$projectname$.Shared" CopyParameters="true">
+						App\Shared\Shared.vstemplate
+					</ProjectTemplateLink>
+					<ProjectTemplateLink ProjectName="$projectname$.Windows" CopyParameters="true">
+						App\Windows\Windows.vstemplate
+					</ProjectTemplateLink>
+					<ProjectTemplateLink ProjectName="$projectname$.WindowsPhone" CopyParameters="true">
+						App\WindowsPhone\WindowsPhone.vstemplate
+					</ProjectTemplateLink>
+				</SolutionFolder>
+				<ProjectTemplateLink ProjectName="$projectname$.Core" CopyParameters="true">
+					Core\Core.vstemplate
+				</ProjectTemplateLink>
+
+
+			</SolutionFolder>
+		</ProjectCollection>
+
+			
+	</TemplateContent>	
+</VSTemplate>

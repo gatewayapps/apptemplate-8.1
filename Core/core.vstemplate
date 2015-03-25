@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>GatewayApp.Core</Name>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>47</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>$safeprojectname$</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Core.csproj" ReplaceParameters="true">
+	<Folder Name="API">
+		<Folder Name="Requests">
+			<ProjectItem ReplaceParameters="true" TargetFileName="RequestBase.cs">RequestBase.cs</ProjectItem>
+		</Folder>
+		<Folder Name="Responses">
+			<ProjectItem ReplaceParameters="true" TargetFileName="ResponseBase.cs">ResponseBase.cs</ProjectItem>
+		</Folder>
+		<ProjectItem ReplaceParameters="true" TargetFileName="APIClient.cs">APIClient.cs</ProjectItem>
+	</Folder>
+	<Folder Name="Models" />
+	<Folder Name="Util" />
+	<ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+	<ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="$targetplatformmonikers$" Value="WindowsPhoneApp, Version=8.1;Windows, Version=8.1"/>
+      <CustomParameter Name="$hidewizard$" Value="true"/>
+      <CustomParameter Name="$projectlanguage$" Value="CSharp"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.PortableLibrary, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.PortableLibrary.ProjectFlavoring.Templating.NewProjectTemplateWizardFactory</FullClassName>
+  </WizardExtension>
+</VSTemplate>

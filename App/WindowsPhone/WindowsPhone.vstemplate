@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+		<Name>SharedBlankApplication.WindowsPhone</Name>
+		<DefaultName>$safeprojectname$</DefaultName>
+		<ProjectType>CSharp</ProjectType>
+		<TargetPlatformName>Windows</TargetPlatformName>
+		<RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+		<CreateInPlace>true</CreateInPlace>
+		<CreateNewFolder>true</CreateNewFolder>
+		<LocationField>Enabled</LocationField>
+		<Hidden>true</Hidden>
+	</TemplateData>
+	<TemplateContent>
+		<Project File="WindowsPhone.Application.WindowsPhone.csproj" ReplaceParameters="true">
+			<Folder Name="Assets">
+				<ProjectItem ReplaceParameters="false" TargetFileName="Logo.scale-240.png">Phone.Logo.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="SmallLogo.scale-240.png">Phone.SmallLogo.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="SplashScreen.scale-240.png">Phone.SplashScreen.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="Square71x71Logo.scale-240.png">Phone.Square71x71Logo.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="StoreLogo.scale-240.png">Phone.StoreLogo.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="WideLogo.scale-240.png">Phone.WideLogo.png</ProjectItem>
+			</Folder>
+			<Folder Name="Properties">
+				<ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">WindowsPhone.AssemblyInfo.cs</ProjectItem>
+			</Folder>
+			<Folder Name="Views">
+			</Folder>
+			<Folder Name="Styles">
+				<ProjectItem ReplaceParameters="true" TargetFileName="PlatformStyles.xaml">PlatformStyles.xaml</ProjectItem>
+			</Folder>
+      			<ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="Package.appxmanifest">Package-PhoneAppx.appxmanifest</ProjectItem>
+		</Project>
+	</TemplateContent>
+	<WizardExtension>
+   	 	<Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    		<FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+	</WizardExtension>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+		<FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.PhoneAppxWizard</FullClassName>
+	</WizardExtension>
+	<WizardData>
+		<packages>
+			<package id="Newtonsoft.Json" version="6.0.8" />
+			<package id="Microsoft.Net.Http" version="2.2.29" />
+			<package id="Prism.StoreApps" version="2.0.0" />
+			<package id="Unity" version="3.5.1405-prerelease" />
+			<package id="Mindscape.Raygun4Net" version="5.0.0" />
+		</packages>
+	</WizardData>
+</VSTemplate>
