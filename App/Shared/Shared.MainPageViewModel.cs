@@ -11,19 +11,29 @@ namespace $safeprojectname$.ViewModels
 {
     public class MainPageViewModel : ViewModel
     {
-		public INavigationService NavigationService { get; set; }
-		public ISessionStateService SessionStateService { get; set; }
+        private string _message;
+        
+        public string Message
+        {
+            get { return _message; }
+            set { SetProperty(ref _message, value); }
+        }
 
+        public INavigationService NavigationService { get; set; }
+        public ISessionStateService SessionStateService { get; set; }
 
-		public MainPageViewModel(INavigationService _navigationService, ISessionStateService _sessionStateService)
+        public MainPageViewModel(INavigationService _navigationService, ISessionStateService _sessionStateService)
 		{
-
 			this.NavigationService = _navigationService;
 			this.SessionStateService = _sessionStateService;
 
-
-
+            Message = "Hello, Gateway.";
 		}
 
+        // default constructor used for design time binding
+        public MainPageViewModel()
+        {
+            Message = "Hello, Gateway.";
+        }
     }
 }
