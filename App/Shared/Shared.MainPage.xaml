@@ -11,6 +11,7 @@
 							Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 	<Grid>
-
+		<TextBlock Style="{ThemeResource TitleTextBlockStyle}" Foreground="Black"
+				   d:DataContext="{Binding Source={d:DesignData Source=DesignData/MainPageDesignData.json, Type=MainPageViewModel}}" Text="{Binding Message}" />
 	</Grid>
 </prism:VisualStateAwarePage>

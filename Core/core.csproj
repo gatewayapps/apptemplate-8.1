@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>$targetplatformsxml$
   <ItemGroup>
+    <Compile Include="API\IClientConfigurationProvider.cs" />
     <Compile Include="API\APIClient.cs" />
     <Compile Include="API\Requests\RequestBase.cs" />
     <Compile Include="API\Responses\ResponseBase.cs" />

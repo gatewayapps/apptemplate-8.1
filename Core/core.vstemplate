@@ -23,6 +23,7 @@
 			<ProjectItem ReplaceParameters="true" TargetFileName="ResponseBase.cs">ResponseBase.cs</ProjectItem>
 		</Folder>
 		<ProjectItem ReplaceParameters="true" TargetFileName="APIClient.cs">APIClient.cs</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="IClientConfigurationProvider.cs">IClientConfigurationProvider.cs</ProjectItem>
 	</Folder>
 	<Folder Name="Models" />
 	<Folder Name="Util" />

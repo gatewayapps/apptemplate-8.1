@@ -17,6 +17,9 @@
 			<Folder Name="ViewModels">
 				<ProjectItem ReplaceParameters="true" TargetFileName="MainPageViewModel.cs">Shared.MainPageViewModel.cs</ProjectItem>
 			</Folder>
+			<Folder Name="DesignData">
+				<ProjectItem ReplaceParameters="true" TargetFileName="MainPageDesignData.json">MainPageDesignData.json</ProjectItem>
+			</Folder>
 			<Folder Name="Views">
 				<ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml">Shared.MainPage.xaml</ProjectItem>
 				<ProjectItem ReplaceParameters="true" OpenInEditor="true" BlendOpenInEditor="false" TargetFileName="MainPage.xaml.cs">Shared.MainPage.xaml.cs</ProjectItem>				
