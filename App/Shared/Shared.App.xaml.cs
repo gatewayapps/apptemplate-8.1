@@ -133,7 +133,7 @@ namespace $ext_safeprojectname$
 		/// </summary>
 		public App()
 		{
-			RaygunClient.Attach(GetResource<String>("raygunApiKey"));
+			
 
 			this.InitializeComponent();
 		}
@@ -169,7 +169,7 @@ namespace $ext_safeprojectname$
 
 		protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
 		{
-
+			RaygunClient.Attach(GetResource<String>("raygunApiKey"));
 			NavigationService.Navigate("Main", null);
 
 			return Task.FromResult<object>(null);
