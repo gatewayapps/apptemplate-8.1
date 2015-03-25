@@ -6,11 +6,14 @@
 							xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
 							xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 							xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+							d:DataContext="{StaticResource MainPageViewModel}"
 							mc:Ignorable="d"
 							mvvm:ViewModelLocator.AutoWireViewModel="True"
 							Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 	<Grid>
-
+        <TextBlock Text="{Binding Message}"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
 	</Grid>
 </prism:VisualStateAwarePage>

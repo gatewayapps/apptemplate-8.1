@@ -21,6 +21,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using $ext_safeprojectname$.Shared.ViewModels;
+using $ext_safeprojectname$.Views;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -157,6 +159,8 @@ namespace $ext_safeprojectname$
 			_container.RegisterInstance<INavigationService>(NavigationService);
 			_container.RegisterInstance<ISessionStateService>(SessionStateService);
 
+			ViewModelLocationProvider.Register(typeof(MainPage).ToString(), () => new MainPageViewModel(NavigationService, SessionStateService));
+			
 			ViewModelLocationProvider.SetDefaultViewModelFactory((type) =>
 			{
 				return _container.Resolve(type);
